@@ -1,0 +1,135 @@
+{
+  "target": "price",
+  "features": [
+    "year",
+    "mileage",
+    "tax",
+    "mpg",
+    "engineSize",
+    "model",
+    "transmission",
+    "fuelType"
+  ],
+  "numeric_features": [
+    "year",
+    "mileage",
+    "tax",
+    "mpg",
+    "engineSize"
+  ],
+  "categorical_features": [
+    "model",
+    "transmission",
+    "fuelType"
+  ],
+  "feature_options": {
+    "model": [
+      " 1 Series",
+      " 2 Series",
+      " 3 Series",
+      " 4 Series",
+      " 5 Series",
+      " 6 Series",
+      " 7 Series",
+      " 8 Series",
+      " M2",
+      " M3",
+      " M4",
+      " M5",
+      " M6",
+      " X1",
+      " X2",
+      " X3",
+      " X4",
+      " X5",
+      " X6",
+      " X7",
+      " Z3",
+      " Z4",
+      " i3",
+      " i8"
+    ],
+    "transmission": [
+      "Automatic",
+      "Manual",
+      "Semi-Auto"
+    ],
+    "fuelType": [
+      "Diesel",
+      "Electric",
+      "Hybrid",
+      "Other",
+      "Petrol"
+    ]
+  },
+  "numeric_ranges": {
+    "year": {
+      "min": 1996.0,
+      "max": 2020.0,
+      "median": 2017.0
+    },
+    "mileage": {
+      "min": 1.0,
+      "max": 87592.625,
+      "median": 18783.0
+    },
+    "tax": {
+      "min": 120.0,
+      "max": 160.0,
+      "median": 145.0
+    },
+    "mpg": {
+      "min": 19.800000000000008,
+      "max": 88.6,
+      "median": 53.3
+    },
+    "engineSize": {
+      "min": 2.0,
+      "max": 2.0,
+      "median": 2.0
+    }
+  },
+  "best_model_name": "ExtraTreesRegressor",
+  "best_model_test_mae": 1377.3713848772002,
+  "best_model_test_rmse": 2048.29132781891,
+  "best_model_test_r2": 0.9562453545883872,
+  "results": [
+    {
+      "name": "LinearRegression",
+      "mae": 2369.973281229333,
+      "rmse": 3201.2708600555316,
+      "r2": 0.8931226790487781,
+      "cv_mae_mean": 2407.080244779831,
+      "cv_mae_std": 14.024383232993054,
+      "best_params": {}
+    },
+    {
+      "name": "RandomForestRegressor",
+      "mae": 1397.2392952923065,
+      "rmse": 2059.0394231737873,
+      "r2": 0.955784958204812,
+      "cv_mae_mean": 1489.353172961408,
+      "cv_mae_std": null,
+      "best_params": {
+        "model__n_estimators": 120,
+        "model__min_samples_split": 5,
+        "model__min_samples_leaf": 1,
+        "model__max_depth": 25
+      }
+    },
+    {
+      "name": "ExtraTreesRegressor",
+      "mae": 1377.3713848772002,
+      "rmse": 2048.29132781891,
+      "r2": 0.9562453545883872,
+      "cv_mae_mean": 1443.9385497109306,
+      "cv_mae_std": null,
+      "best_params": {
+        "model__n_estimators": 120,
+        "model__min_samples_split": 5,
+        "model__min_samples_leaf": 1,
+        "model__max_depth": 25
+      }
+    }
+  ]
+}
